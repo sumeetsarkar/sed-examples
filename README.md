@@ -9,4 +9,5 @@
 
 ### Examples
 
-1. XML Parsing
+1. XML Parsing - Search
+2. XML Parsing - Update

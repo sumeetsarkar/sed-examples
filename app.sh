@@ -15,4 +15,12 @@ sed -n "/<book id=\"$id\"/,/<\/book>/ {
   /<title>/p
 }" $file
 
+new_title="Midnight Rain 2"
+echo "\nUpdating title of book with id=$id"
+sed "/<book id=\"$id\"/,/<\/book>/ {
+  /<title>/ {
+    s/<title>[^\"]*<\/title>/<title>$new_title<\/title>/
+  }
+}" $file > $output
+
 echo "File output => $output"
